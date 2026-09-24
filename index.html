@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>洗腎室同仁預班系統</title>
+
+  <!-- 📱 iPhone / iPad / Android 桌面專屬 App 圖示與全螢幕設定 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="預班系統">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="預班系統">
+  <meta name="theme-color" content="#16a34a">
+
+  <!-- 🌟 高畫質 App 圖示（相容 GitHub Pages 本地路徑與外鏈） -->
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon-precomposed" href="icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon.png">
+  <link rel="shortcut icon" href="icon.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f0fdf4;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #166534;
+    }
+
+    .app-card {
+      background: white;
+      padding: 36px 28px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 20px 40px -10px rgba(22, 163, 74, 0.15);
+      border: 2px solid #bbf7d0;
+      max-width: 320px;
+      width: 88%;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo-img {
+      width: 105px;
+      height: 105px;
+      border-radius: 22px;
+      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.2);
+      border: 3px solid #bbf7d0;
+      object-fit: cover;
+      margin-bottom: 16px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #14532d;
+      margin: 0 0 8px 0;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #15803d;
+      font-weight: 500;
+      margin: 0 0 20px 0;
+    }
+
+    .spinner {
+      border: 3px solid #dcfce7;
+      border-top: 3px solid #16a34a;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .tip {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.5;
+      background: #f8fafc;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px dashed #cbd5e1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="app-card">
+    <img src="icon.png" alt="預班系統" class="logo-img">
+    <h1 class="title">洗腎室預班系統</h1>
+    <p class="subtitle">正在為您快速開啟系統...</p>
+    <div class="spinner"></div>
+    <div class="tip">
+      💡 提示：點擊下方分享鍵 ➔ 選擇「加入主畫面」，即可安裝專屬 App 圖示唷！
+    </div>
+  </div>
+
+  <script>
+    // 🔗 請將下方網址替換為您的 Google Apps Script 正式發布網址（以 /exec 結尾）
+    var GAS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbw8KFrnooWprjKXYV09haoLioe0EtyK3fxB0NdtwzEFUhWcnudby-mIpJGH9M7gpx4A/exec";
+
+    // 🚀 0.4 秒後自動無縫跳轉至 Google 預班系統
+    setTimeout(function () {
+      if (GAS_WEBAPP_URL && GAS_WEBAPP_URL.indexOf("AKfyc") > -1) {
+        window.location.replace(GAS_WEBAPP_URL);
+      }
+    }, 400);
+  </script>
+
+</body>
+
+</html>
